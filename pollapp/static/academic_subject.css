@@ -1,0 +1,67 @@
+/* PAGE STYLES */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef2f3;
+    padding: 20px;
+}
+
+/* HEADER */
+.poll-header {
+    text-align: center;
+    background: #0a9396;
+    color: #fff;
+    padding: 18px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* FORM */
+.poll-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* QUESTION FIELDSETS */
+fieldset {
+    border: 2px solid #52b69a;
+    margin: 15px 0;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+legend {
+    font-weight: bold;
+    color: #0077b6;
+}
+
+/* OPTIONS */
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+label {
+    margin-right: 18px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* SUBMIT BUTTON */
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #0077b6;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.submit-btn:hover {
+    background: #0096c7;
+}

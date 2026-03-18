@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event poll</title>
+    <link rel="stylesheet" href="{% static 'academic_subject.css'%}">
+    <link rel="stylesheet" href="{% static 'styleee.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">SchoolPolls</div>
+        <ul class="nav-links">
+            <li><a href="{% url 'home' %}">Home</a></li>
+             <li class="dropdown">
+                <a href="#" class="dropbtn">Categories ▾</a>
+                <div class="dropdown-content">
+                    <a href="{% url 'academic_subjects' %}">Academic Subjects</a>
+                    <a href="#">Events</a>
+                    <a href="{% url 'school_opinion' %}">School Opinions</a>
+                </div>
+            </li>
+            <li><a href="{% url 'login' %}">Logout</a></li>
+        </ul>
+    </nav>
+    <!-- Header -->
+    <header class="header-banner">
+        <h1>Event Polls</h1>
+        <p>Share your opinion on school events!</p>
+    </header>
+
+
+<!-- form -->
+<form class="poll-form"id="pollForm" method="POST">
+      {% csrf_token %}
+      {% for q in questions %}
+    <fieldset>
+        <legend>{{ forloop.counter }}. {{ q.question}}</legend>
+         {% for option in q.options.all %}
+        <div>
+            <input type="radio" 
+                name="q{{q.id}}" 
+                value="{{option.option_text}}">
+                <label>{{option.option_text}}</label>
+        </div>
+        {% endfor %}
+    </fieldset>
+    {% endfor %}
+<button type="submit" class="submit-btn">Submit Poll</button>
+{% if success %}
+<p style="color:green">{{ success }}</p>
+    {% endif %}
+    {% if error %}
+        <p style="color:red">{{ error }}</p>
+    {% endif %}
+</form>
+
+<!-- script -->
+<script>
+document.getElementById("pollForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const formData = new FormData(this);
+
+    fetch("{% url 'submit_event_poll' %}", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if(data.status === "success"){
+            alert("Poll submitted successfully!");
+            location.reload();
+        }
+    });
+});
+</script>
+</body>
+</html>

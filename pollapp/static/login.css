@@ -1,0 +1,140 @@
+/* GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY BG AND ALIGNMENT */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #467bb7, #35a79c);
+    font-family: Arial, sans-serif;
+}
+
+/* PAGE TITLE */
+.main-heading {
+    position: absolute;
+    top: 30px;
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+/* CONTAINER TO CENTER THE CARD */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* GLASS EFFECT LOGIN CARD */
+.login-card {
+    background: rgba(255, 255, 255, 0.25); /* semi-transparent */
+    backdrop-filter: blur(12px);           /* frosted glass effect */
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 30px 40px;
+    width: 350px;
+}
+
+.login-card h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+/* INPUT BOXES WITH FLOATING LABEL STYLE */
+.input-box {
+    position: relative;
+    margin: 18px 0;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+}
+
+.input-box span {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    color: #333;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.input-box input:focus + span,
+.input-box input:not(:placeholder-shown) + span {
+    top: -12px;
+    left: 15px;
+    font-size: 12px;
+    color: #0077b6;
+}
+
+/* REMEMBER ME / FORGOT */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: white;
+    margin: 10px 0;
+}
+
+.remember-forgot a {
+    color: #e0f7fa;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+/* SUBMIT BUTTON */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #0f4c81;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 17px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0b3a64;
+}
+
+/* REGISTER LINK */
+.register-link {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 15px;
+    color: white;
+}
+
+.register-link a {
+    text-decoration: none;
+    color: #ffd54f;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}

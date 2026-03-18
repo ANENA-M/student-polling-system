@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Poll</title>
+    <link rel="stylesheet" href="{% static 'register.css' %}">
+</head>
+<body>
+
+
+
+<div class="container">
+    <div class="register-card">
+        <h2>Create Account</h2>
+
+        <form method="POST" action="{% url 'register' %}">
+        {% csrf_token %}
+            <div class="input-box">
+                <input type="text"name="full_name" required>
+                <span>Full Name</span>
+            </div>
+
+            <div class="input-box">
+                <input type="text"name="username" required>
+                <span>Username</span>
+            </div>
+
+            <div class="input-box">
+                <input type="email"name="email" required>
+                <span>Email</span>
+            </div>
+
+            <div class="input-box">
+                <input type="password"name="password" required>
+                <span>Password</span>
+            </div>
+
+            <div class="input-box">
+                <input type="password"name="password2" required>
+                <span>Confirm Password</span>
+            </div>
+
+            <!-- <button type="button" class="btn" onclick="redirectToLogin()">Register</button> -->
+             <button type="submit" class="btn">Register</button>
+             {% if error %}
+                <p style="color:red">{{ error }}</p>
+            {% endif %}
+
+            {% if success %}
+                <p style="color:green">{{ success }}</p>
+            {% endif %}
+
+
+<script>
+function redirectToLogin() {
+    alert("Registration successful!");
+    window.location.href = "login.html";  // redirect to login
+}
+</script>
+
+            <div class="login-link">
+                <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

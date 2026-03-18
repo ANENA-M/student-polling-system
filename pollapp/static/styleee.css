@@ -1,0 +1,155 @@
+/* GLOBAL STYLES */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #005f73;
+    padding: 15px 30px;
+    color: #fff;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+/* DROPDOWN STYLES */
+.dropdown .dropbtn {
+    cursor: pointer;
+}
+/* Hidden dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0077b6;
+    min-width: 180px;
+    top: 42px;
+    border-radius: 5px;
+    z-index: 1;
+}
+.dropdown-content a {
+    display: block;
+    padding: 10px 14px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.dropdown-content a:hover {
+    background: #0096c7;
+}
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change link color on hover */
+.nav-links li a:hover {
+    background: #014f5b;
+    border-radius: 4px;
+}
+/* HEADER */
+.header-banner {
+    text-align: center;
+    background: #0a9396;
+    color: #fff;
+    padding: 60px 0;
+}
+
+.header-banner h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.header-banner p {
+    font-size: 18px;
+}
+.category-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+    width: 800px;
+}
+.category-card {
+    background: white;
+    width: 200px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.category-card h3 {
+    color: #0077b6;
+}
+.count-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+/* POLL SECTION
+.poll-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 20px;
+}
+
+.poll-card {
+    background: #fff;
+    width: 28%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+} */
+
+/* 
+
+/* FILTERS */
+/* .filters {
+    text-align: center;
+    margin: 20px 0;
+} */
+
+/* .filters button {
+    background: #52b69a;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+} */
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #005f73;
+    color: white;
+    margin-top: 40px;
+}
